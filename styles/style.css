@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url(/assets/fonts/OpenSans-Medium.ttf) format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: #e3e7e9;
+    background: radial-gradient(circle, #b1afb0 46%, #e3e7e9 96%);
+}
+
+nav{
+    background-color: #2e2d2d;
+    height: 70px;
+    text-align: left;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    padding: 25px;
+    font-size: .8rem;
+ }
+
+nav li{
+    margin-left: 30px;
+}
+
+nav a {
+    padding: 15px;
+    color: #fffefe;
+    background-color: none;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+nav a:hover{
+    background-color: #484646;
+}
+
+header h1{
+    padding-top: 20px;
+    margin-left: 30px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+section form{
+    margin: 20px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 25px;
+    font-size: .9rem;
+    box-shadow: 0 0 10px #808080;
+}
+
+input{
+    padding: 10px;
+    border-radius: 3px;
+    margin-right: 5px;
+    border: .5px solid #afadad;
+}
+
+input:focus{
+    background-color: #e8f5faf3;
+}
+
+form button{
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.add-product{
+    background-color: #458ae4;
+    color: white;
+    border:none;
+    border-radius: 5px;
+    padding: 12px 15px;
+}
+
+.add-product:hover{
+    background-color: #4674af;
+}
+
+.added-product{
+    margin: 20px auto;
+    text-align: center;
+    font-weight: 600;
+    animation: show .5s 1;
+}
+
+@keyframes show {
+    0%{
+        transform: translate(-3vh)
+    }
+}
+
+.search-input{
+    width: 20%;
+}
+
+.search-container .fa-solid{
+    border: none;
+    background-color: none;
+}
+
+.inventory-table{
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    width: 97%;
+    text-align: center;
+    font-size: .9rem;
+    box-shadow: 0 0 10px #808080;
+}
+
+th{
+    border-bottom: 0.5px solid #afadad;
+    padding: 10px;
+}
+
+td{
+    border-bottom: 0.5px solid #afadad;
+    padding: 20px;
+}
+
+table button{
+    margin-right: 10px;
+    padding: 10px;
+    width: 90px;
+    height: auto;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.edit-button{
+    background-color: #424141;
+    color: white;
+}
+
+.delete-button{
+    background-color: #dd2c2c;
+    color: white;
+}
+
+footer{
+    background-color: #2e2d2d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p{
+    font-size: .8rem;
+}
+
+
+
+
+
+
+
+
+

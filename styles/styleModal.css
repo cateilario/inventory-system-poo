@@ -1,0 +1,123 @@
+.modal-window{
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: #0000008d;
+}
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: none;
+    max-width: 400px;
+    min-height: 50vh;
+    border-radius: 5px;
+    margin: 150px auto;
+    animation: show 1s .5s backwards;
+}
+
+@keyframes show {
+    0%{
+        transform: translateY(-100vh);
+    }
+}
+
+.modal-header{
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 100%;
+    border-bottom: 1px solid #a5a4a4;
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+
+.edit-form{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.modal-footer{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    border-top: 1px solid #a5a4a4;
+    padding: 10px 0 10px 0;
+}
+
+.modal-footer button{
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
+}
+
+.modal-footer .btn-close{
+    background-color: #3b3b3b;
+    color: white;
+}
+
+.modal-footer .btn-close:hover{
+    background-color: #868585;
+}
+
+.modal-footer .btn-save{
+    background-color: #4747b9;
+    color: white;
+}
+
+.modal-footer .btn-save:hover{
+    background-color: #7777e0;
+}
+
+.hidden{
+    display: none;
+}
+
+.modal2-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: none;
+    max-width: 400px;
+    min-height: 20vh;
+    border-radius: 5px;
+    margin: 150px auto;
+    position: relative;
+    animation: show 1s .5s backwards;
+}
+
+.modal-header .fa-solid {
+    background-color: #a70b0b;
+    color: white;
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    font-weight: 500;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.modal-header .fa-solid:hover{
+    background-color: #aa4343;
+}
+
+.modal2-content .modal-body{
+    margin: 10px 
+}

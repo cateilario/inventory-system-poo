@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/styleModal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Inventario</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><img src="/assets/gestion-de-productos.png" alt="" sizes="16x16"></li>
+            <li><a href="#" class="nav">Inventario</a></li>
+            <li><a href="#" class="nav">Panel de Control</a></li>
+            <li><a href="#" class="nav">Equipo</a></li>
+            <li><a href="#" class="nav">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>INVENTARIO FRUTERIA</h1>
+    </header>
+    
+    <section>
+    <form class="products-form" id="inventory-form" autocomplete="off">
+        <div class="add-container">
+            <label for="product-name"></label>
+            <input class="name" type="text" id="product-name" placeholder="Nombre" required>
+            <label for="product-quantity"></label>
+            <input class="quantity" type="number" id="product-quantity" placeholder="Cantidad" required>
+            <label for="product-price"></label>
+            <input class="price" type="number" id="product-price" step="0.01" placeholder="Precio" required>
+            <button id="add-product" class="add-product" type="submit">Añadir producto</button>
+            <span class="added-product" id="added-product"></span>
+        </div>
+    </form>
+    </section>
+
+    <section>
+    <form class="products-form" id="search-form">
+        <div class="search-container"> 
+            <label for="search"></label>
+            <input type="text" id="search" placeholder="Buscar" class="search-input" autocomplete="off">
+            <button type="button" class="fa-solid fa-magnifying-glass fa-lg" style="color: #477cd7;" id="search-btn"></button>
+        </div>
+    </form>
+    </section>
+
+    <div class="modal-window" id="modal-search">
+        <div class="modal2-content">
+            <div class="modal-header">
+                <p class="modal-title">PRODUCTO ENCONTRADO</p>
+                <button id="close-modal" class="fa-solid fa-x" style="color: #ffffff;"></button>
+            </div>
+            <div class="modal-body">
+                <p id="founded-product"></p>
+            </div> 
+            <div class="modal-footer">
+              <button class="btn-close" id="btn-delete">Borrar</button>
+              <button class="btn-save" id="btn-edit" data-toggle="modal" data-target="#modal">Editar Producto</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-window" id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-title">EDITAR PRODUCTO</p>
+            </div>
+            <div class="modal-body">
+              <form action="" class="edit-form" id="edit-form">
+                <label for="name-edit">Nuevo nombre:</label>
+                <input type="text" id="name-edit"><br>
+                <label for="quantity-edit">Nueva Cantidad:</label>
+                <input type="number" id="quantity-edit"><br>
+                <label for="price-edit">Nuevo precio:</label>
+                <input type="number" id="price-edit"><br>
+              </form>
+            </div>
+            <div class="modal-footer">
+                <button id="btn-close" class="btn-close" >Cerrar</button>
+                <button type="button" id="btn-save" class="btn-save">Guardar</button>
+            </div>
+        </div>
+      </div>
+    
+    <section>
+    <table id="inventory-table" class="inventory-table">
+        <tr>
+            <th>PRODUCTO</th>
+            <th>STOCK</th>
+            <th>PRECIO</th>
+            <th>ACCIONES</th>
+        </tr>
+            <tbody id="inventory-content"></tbody>
+    </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Tarea 2 - CRUD de Inventario: Caterina Ilario Paz </p>
+    </footer>
+
+    <script src="/scripts/main.js" type="module"></script>
+</body>
+</html>
