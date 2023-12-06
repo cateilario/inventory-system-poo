@@ -75,7 +75,7 @@ export class ProductManager {
 
 }
 
-// Function to obtain random quantity
+// Funciones para obtener cantidad y precio aleatorios
 const getRandomQuantity = () =>{
     return Math.floor(Math.random()* 13) +1;
 }
