@@ -13,8 +13,31 @@ export class ProductManager {
         this.#products = value;
     }
 
+    // Método para inicializar los productos del inventerio
+    uploadProducts(){
+        this.#products = [
+            {id: 1, name: "Manzana Gran Smith", quantity: getRandomQuantity(), price: getRandomPrice()},
+            {id: 2, name: "Manzana Golden", quantity: getRandomQuantity(), price: getRandomPrice()},
+            {id: 3, name: "Piña", quantity: getRandomQuantity(), price: getRandomPrice()},
+            {id: 4, name: "Naranja", amounquantityt: getRandomQuantity(), price: getRandomPrice()},
+            {id: 5, name: "Melocotón", quantity: getRandomQuantity(), price: getRandomPrice()},
+            {id: 6, name: "Pera", quantity: getRandomQuantity(), price: getRandomPrice()},
+            {id: 7, name: "Mandarina", quantity: getRandomQuantity(), price: getRandomPrice()},
+            {id: 8, name: "Kiwi", quantity: getRandomQuantity(), price: getRandomPrice()},
+            {id: 9, name: "Limón", quantity: getRandomQuantity(), price: getRandomPrice()},
+            {id: 10, name: "Aguacate", quantity: getRandomQuantity(), price: getRandomPrice()},
+            {id: 11, name: "Plátano", quantity: getRandomQuantity(), price: getRandomPrice()},
+            {id: 12, name: "Melón", quantity: getRandomQuantity(), price: getRandomPrice()},
+            {id: 13, name: "Fresa", quantity: getRandomQuantity(), price: getRandomPrice()},
+            {id: 14, name: "Cereza", quantity: getRandomQuantity(), price: getRandomPrice()},
+            {id: 15, name: "Melón", quantity: getRandomQuantity(), price: getRandomPrice()},
+            {id: 16, name: "Sandía", quantity: getRandomQuantity(), price: getRandomPrice()},
+        ];
+    }
+
     // Método para obtener lista productos
     listProducts(){
+        this.uploadProducts();
         return this.#products;
     }
 
@@ -55,4 +78,13 @@ export class ProductManager {
         }
     }
 
+}
+
+// Function to obtain random quantity
+const getRandomQuantity = () =>{
+    return Math.floor(Math.random()* 13) +1;
+}
+
+const getRandomPrice = () => {
+    return (Math.random() * 100 + 1).toFixed(2)
 }

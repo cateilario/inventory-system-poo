@@ -52,6 +52,9 @@ const updateInventoryTable = () => {
     })
 }
 
+// Llamar a la función para mostrar la tabla del inventario
+updateInventoryTable();
+
 
 
 
