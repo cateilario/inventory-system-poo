@@ -44,6 +44,7 @@ export class Product {
         this.#price = value;
     }
 
+    // tipo toString
     showProduct(){
         console.log(`ID: ${this.#id}<br/>,
         Nombre: ${this.#name}<br/>,
