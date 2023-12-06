@@ -1,20 +1,8 @@
+
 export class ProductManager {
     #products;
 
     constructor(){
-        this.#products = []
-    }
-
-    get products(){
-        return this.#products;
-    }
-
-    set products(value){
-        this.#products = value;
-    }
-
-    // Método para inicializar los productos del inventerio
-    uploadProducts(){
         this.#products = [
             {id: 1, name: "Manzana Gran Smith", quantity: getRandomQuantity(), price: getRandomPrice()},
             {id: 2, name: "Manzana Golden", quantity: getRandomQuantity(), price: getRandomPrice()},
@@ -35,9 +23,16 @@ export class ProductManager {
         ];
     }
 
+    get products(){
+        return this.#products;
+    }
+
+    set products(value){
+        this.#products = value;
+    }
+
     // Método para obtener lista productos
     listProducts(){
-        this.uploadProducts();
         return this.#products;
     }
 

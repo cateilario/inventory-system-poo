@@ -14,8 +14,10 @@ document.getElementById('inventory-form').addEventListener('submit', function(e)
     const productName = document.getElementById('product-name').value
     const productQuantity = parseInt(document.getElementById('product-quantity').value)
     const productPrice = parseFloat(document.getElementById('product-price').value)
+    const addedInput = document.getElementById("added-product")
 
     // Crear una instancia de Product con los valores del formulario
+    if (productName && !isNaN(productPrice) && !isNaN(productQuantity)){
     const newProduct = new Product(Date.now(), productName, productQuantity, productPrice)
     console.log(newProduct)
 
@@ -25,8 +27,18 @@ document.getElementById('inventory-form').addEventListener('submit', function(e)
     // Limpiar formulario
     this.reset();
 
+    // Mensaje confirmación
+    addedInput.innerText = `Producto "${productName}" añadido con éxito`
+    addedInput.classList.add = "hidden"
+    addedInput.style.display = "block"
+    setTimeout(() => {
+            addedInput.style.display= "none"
+    }, 4000);
+
     // Actualizar la tabla del inventario
+    productManager.listProducts();
     updateInventoryTable();
+    }
 })
 
 const updateInventoryTable = () => {
@@ -54,13 +66,6 @@ const updateInventoryTable = () => {
 
 // Llamar a la función para mostrar la tabla del inventario
 updateInventoryTable();
-
-
-
-
-
-
-
 
 
 });
