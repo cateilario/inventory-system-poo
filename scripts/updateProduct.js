@@ -15,7 +15,7 @@ export const updateProduct = product => {
     newNameInput.value = product.name;
 
     closeModal.addEventListener("click", () => {
-        modalBox.style.display = "none";
+        modalBox.style.display = 'none';
     })
 
     saveBtn.addEventListener("click", () => {
@@ -29,10 +29,8 @@ export const updateProduct = product => {
                 quantity: newQuantity,
                 price: newPrice,
             };
-
             productManager.updateProductByID(product.id, updatedProduct)
             updateInventoryTable();
-            console.log(productManager.listProducts())
             modalBox.style.display = 'none';
         } else {
             alert('Error! Ingrese valores válidos.')
