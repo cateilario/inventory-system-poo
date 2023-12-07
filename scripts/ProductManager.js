@@ -19,7 +19,7 @@ export class ProductManager {
             {id: 1, name: "Manzana Gran Smith", quantity: getRandomQuantity(), price: getRandomPrice()},
             {id: 2, name: "Manzana Golden", quantity: getRandomQuantity(), price: getRandomPrice()},
             {id: 3, name: "Piña", quantity: getRandomQuantity(), price: getRandomPrice()},
-            {id: 4, name: "Naranja", amounquantityt: getRandomQuantity(), price: getRandomPrice()},
+            {id: 4, name: "Naranja", quantity: getRandomQuantity(), price: getRandomPrice()},
             {id: 5, name: "Melocotón", quantity: getRandomQuantity(), price: getRandomPrice()},
             {id: 6, name: "Pera", quantity: getRandomQuantity(), price: getRandomPrice()},
             {id: 7, name: "Mandarina", quantity: getRandomQuantity(), price: getRandomPrice()},
@@ -56,7 +56,7 @@ export class ProductManager {
 
         // Si index no es -1 (!= no coincidente === coincidente), hay que reemplazar
         if(index !== -1){
-            this.#products[index] = updateProduct;
+            this.#products[index] = updateProduct; 
         }
     }
 

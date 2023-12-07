@@ -32,7 +32,7 @@ export const updateInventoryTable = () => {
         const editBtn = row.querySelector('.edit-button');
 
         editBtn.addEventListener('click', () =>{
-            updateProduct(product.id)
+            updateProduct(product)
         })
 
     })

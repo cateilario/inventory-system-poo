@@ -1,14 +1,15 @@
 import { productManager } from "./main.js";
 import { updateInventoryTable } from "./updateTable.js";
 
+const modalBox = document.getElementById("edit-modal")
+const closeModal = document.getElementById("btn-close")
+const saveBtn = document.getElementById("btn-save")
+const newNameInput = document.getElementById("name-edit")
+const newQuantityInput = document.getElementById("quantity-edit")
+const newPriceInput = document.getElementById("price-edit")
+
 export const updateProduct = product => {
-    const modalBox = document.getElementById("edit-modal")
-    const closeModal = document.getElementById("btn-close")
-    const saveBtn = document.getElementById("btn-save")
-    const newNameInput = document.getElementById("name-edit")
-    const newQuantityInput = document.getElementById("quantity-edit")
-    const newPriceInput = document.getElementById("price-edit")
-   
+    console.log(product)
     modalBox.style.display = "block";
 
     newNameInput.value = product.name;
@@ -28,14 +29,16 @@ export const updateProduct = product => {
                 quantity: newQuantity,
                 price: newPrice,
             };
+
             productManager.updateProductByID(product.id, updatedProduct)
             updateInventoryTable();
             console.log(productManager.listProducts())
             modalBox.style.display = 'none';
         } else {
             alert('Error! Ingrese valores válidos.')
+            newQuantityInput.value = "";
+            newPriceInput.value = "";
         }
-
-        
     })
 }
+
