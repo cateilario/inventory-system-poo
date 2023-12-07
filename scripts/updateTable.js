@@ -1,4 +1,6 @@
 import { productManager } from "./main.js";
+import { deleteProduct } from "./deleteProduct.js";
+import { updateProduct } from "./updateProduct.js";
 
 export const updateInventoryTable = () => {
     const tableBody = document.getElementById('inventory-content');
@@ -20,5 +22,18 @@ export const updateInventoryTable = () => {
             </td>
         `;
         tableBody.appendChild(row);
+
+        const deleteBtn = row.querySelector('.delete-button');
+    
+        deleteBtn.addEventListener('click', () =>{
+            deleteProduct(product)
+        })
+
+        const editBtn = row.querySelector('.edit-button');
+
+        editBtn.addEventListener('click', () =>{
+            updateProduct(product.id)
+        })
+
     })
-}
+};

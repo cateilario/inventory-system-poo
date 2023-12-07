@@ -1,13 +1,9 @@
-import { updateInventoryTable } from "./updateTable.js";
 import { productManager } from "./main.js";
+import { updateInventoryTable } from "./updateTable.js";
 
-export const deleteProduct = (product) => {
-
-    if (confirm(`¿Seguro de que deseas borrar el producto?`)) {
+export const deleteProduct = product => {
+    if(confirm(`¿Seguro que seas borrar ${product.name}?`)) {
         productManager.deleteProductByID(product.id);
-        console.log(productManager.products)
-
-    productManager.listProducts();
-    updateInventoryTable();  
-    }
-};
+        updateInventoryTable();
+    }  
+}

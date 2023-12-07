@@ -1,6 +1,5 @@
 import { Product } from "./Product.js";
 import { ProductManager } from "./ProductManager.js";
-import { deleteProduct } from "./deleteProduct.js";
 import { updateInventoryTable } from "./updateTable.js";
 
 // Instanciar el ProductManager
@@ -28,7 +27,7 @@ document.getElementById('inventory-form').addEventListener('submit', function(e)
 
     // Mensaje confirmación
     addedInput.innerText = `Producto "${productName}" añadido con éxito`
-    addedInput.classList.add = "hidden"
+    addedInput.classList.add("hidden")
     addedInput.style.display = "block"
     setTimeout(() => {
             addedInput.style.display= "none"
@@ -43,7 +42,6 @@ document.getElementById('inventory-form').addEventListener('submit', function(e)
 // Llamar a la función para mostrar la tabla del inventario
 updateInventoryTable();
 
-const deleteBtn = document.getElementById('delete-button');
-deleteBtn.addEventListener('click', deleteProduct)
+
 
 

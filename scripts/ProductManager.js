@@ -1,8 +1,20 @@
-
 export class ProductManager {
     #products;
 
     constructor(){
+        this.#products = [];
+    }
+
+    get products(){
+        return this.#products;
+    }
+
+    set products(value){
+        this.#products = value;
+    }
+    
+    // Método para cargar productos
+    uploadProducts(){
         this.#products = [
             {id: 1, name: "Manzana Gran Smith", quantity: getRandomQuantity(), price: getRandomPrice()},
             {id: 2, name: "Manzana Golden", quantity: getRandomQuantity(), price: getRandomPrice()},
@@ -23,16 +35,11 @@ export class ProductManager {
         ];
     }
 
-    get products(){
-        return this.#products;
-    }
-
-    set products(value){
-        this.#products = value;
-    }
-
-    // Método para obtener lista productos
+    // Método para obtener lista productos actualizada
     listProducts(){
+        if(this.#products.length === 0){
+            this.uploadProducts();
+        }
         return this.#products;
     }
 
@@ -60,6 +67,12 @@ export class ProductManager {
         if (index !== -1){
             this.#products.splice(index, 1);
         }
+    }
+
+    uploadToLocalStorage(){
+        this.#products.forEach(product => {
+            localStorage.setItem(product.id, JSON.stringify(product.toJSON()))
+        })
     }
 
     // Método para mostrar todos los productos entro del array (~ toString)

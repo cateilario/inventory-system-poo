@@ -52,5 +52,13 @@ export class Product {
         Precio: ${this.#price}<br/>`)
     }
 
-
+    // Transformar objeto a JSON 
+    toJSON() {
+        return {
+            id: this.#id,
+            name: this.#name,
+            quantity: this.#quantity,
+            price: this.#price
+        };
+    }
 }
