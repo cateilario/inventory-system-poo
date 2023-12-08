@@ -69,6 +69,10 @@ export class ProductManager {
         }
     }
 
+    searchProductByName(name) {
+        return this.#products.find(product => product.name.toLowerCase() === name.toLowerCase());
+    }
+
     uploadToLocalStorage(){
         this.#products.forEach(product => {
             localStorage.setItem(product.id, JSON.stringify(product.toJSON()))

@@ -104,9 +104,9 @@ form button{
     width: 20%;
 }
 
-.search-container .fa-solid{
+.search-container .search-btn{
     border: none;
-    background-color: none;
+    background-color: white;
 }
 
 .inventory-table{

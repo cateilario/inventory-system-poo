@@ -1,4 +1,5 @@
 import { ProductManager } from "./ProductManager.js";
+import { addProduct } from "./addProduct.js";
 import { updateInventoryTable } from "./updateTable.js";
 
 // Instanciar el ProductManager

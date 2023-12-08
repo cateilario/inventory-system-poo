@@ -9,7 +9,6 @@ const newQuantityInput = document.getElementById("quantity-edit")
 const newPriceInput = document.getElementById("price-edit")
 
 export const updateProduct = product => {
-    console.log(product)
     modalBox.style.display = "block";
 
     newNameInput.value = product.name;
