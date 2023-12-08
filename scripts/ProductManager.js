@@ -43,9 +43,28 @@ export class ProductManager {
         return this.#products;
     }
 
+    // Método para guardar productos en localStorage
+    saveInLocalStorage() {
+        localStorage.setItem("products", JSON.stringify(this.#products));
+    }
+
+    // Cargar Productos desde localStorage
+    loadProductsFromLocalStorage() {
+        const storedProducts = localStorage.getItem("products");
+        if (storedProducts) {
+            this.#products = JSON.parse(storedProducts);
+        } else {
+            this.uploadProducts(); // Cargar productos predeterminados si no hay nada en localStorage
+        }
+        console.log("Products loaded from localStorage:", this.#products)
+    }
+
+    
+
     // Método para añadir un producto
     addProduct(product){
         this.#products.push(product);
+        this.saveInLocalStorage();
     }
 
     // Método para actualizar un producto a partir del ID
@@ -57,6 +76,7 @@ export class ProductManager {
         // Si index no es -1 (!= no coincidente === coincidente), hay que reemplazar
         if(index !== -1){
             this.#products[index] = updateProduct; 
+            this.saveInLocalStorage();
         }
     }
 
@@ -66,17 +86,12 @@ export class ProductManager {
 
         if (index !== -1){
             this.#products.splice(index, 1);
+            this.saveInLocalStorage();
         }
     }
 
     searchProductByName(name) {
         return this.#products.find(product => product.name.toLowerCase() === name.toLowerCase());
-    }
-
-    uploadToLocalStorage(){
-        this.#products.forEach(product => {
-            localStorage.setItem(product.id, JSON.stringify(product.toJSON()))
-        })
     }
 
     // Método para mostrar todos los productos entro del array (~ toString)
@@ -89,7 +104,6 @@ export class ProductManager {
             `);
         }
     }
-
 }
 
 // Funciones para obtener cantidad y precio aleatorios

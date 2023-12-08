@@ -6,6 +6,9 @@ import { addProduct } from "./addProduct.js";
 // Instanciar el ProductManager
 export const productManager = new ProductManager();
 
+productManager.loadProductsFromLocalStorage();
+
+// Enlazar botones con sus eventos
 const addBtn = document.getElementById("inventory-form")
 const searchBtn = document.getElementById("search-btn");
 const searchName = document.getElementById("search");
