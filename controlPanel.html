@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Panel de Control</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><img src="/assets/gestion-de-productos.png" alt="" sizes="16x16"></li>
+            <li><a href="/index.html" class="nav">Inventario</a></li>
+            <li><a href="/controlPanel.html" class="nav">Panel de Control</a></li>
+            <li><a href="#" class="nav">Equipo</a></li>
+            <li><a href="#" class="nav">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>INVENTARIO FRUTERIA</h1>
+        <h2>Panel de Control</h2>
+    </header>
+
+    <section class="control-panel">
+        <div class="panel-content">
+            <h3>Unidades de productos</h3>
+            <p class="result" id="total-quantity"></p>
+        </div>
+        <div class="panel-content">
+            <h3>Valor del stock</h3>
+            <p class="result" id="total-price"></p>
+        </div>
+        <div class="panel-content">
+            <h3>Coste medio</h3>
+            <p class="result"></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Tarea 4 - CRUD de Inventario con POO: Caterina Ilario Paz </p>
+    </footer>
+
+    <script src="/scripts/controlPanel.js" type="module"></script>
+</body>
+</html>

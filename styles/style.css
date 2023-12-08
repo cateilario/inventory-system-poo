@@ -6,12 +6,12 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans';
 }
 
 body{
     background: #e3e7e9;
-    background: radial-gradient(circle, #b1afb0 46%, #e3e7e9 96%);
+    background: radial-gradient(circle, #bebdbe 46%, #e3e7e9 96%);
 }
 
 nav{
@@ -48,6 +48,14 @@ header h1{
     margin-left: 30px;
     font-size: 1.5rem;
     text-align: center;
+}
+
+header h2{
+    margin: 2rem 3rem;
+    padding-top: 1rem;
+    font-size: 1.2rem;
+    color:#2e2d2d;
+    border-top: 1px solid #575555;
 }
 
 section form{
@@ -150,11 +158,46 @@ table button{
     color: white;
 }
 
+.control-panel {
+    background-color: #f0ecec;
+    border:none;
+    border-radius: 5px;
+    width: 90%;
+    height: 30vh;
+    margin: 1vh auto;
+    box-shadow: 0 0 10px #808080;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2rem;
+}
+
+div > h3{
+    color:#484646;
+    font-size: .9rem;
+    padding: .8rem;
+}
+
+div > h3 + p {
+    font-size: 1.3rem;
+    font-weight: 650;
+    padding: 0 .8rem;
+}
+
+.control-panel .panel-content{
+    border: 1px solid #a8a6a6;
+    border-radius: 5px;
+    background-color: #f0ecec;
+    width: 30%;
+    height: 50%;
+}
+
 footer{
     background-color: #2e2d2d;
     color: white;
     text-align: center;
     padding: 20px;
+    margin-top: 3rem;
 }
 
 footer p{

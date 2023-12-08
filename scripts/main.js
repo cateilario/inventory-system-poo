@@ -9,6 +9,8 @@ export const productManager = new ProductManager();
 productManager.loadProductsFromLocalStorage();
 
 // Enlazar botones con sus eventos
+document.addEventListener("DOMContentLoaded", () =>{ 
+
 const addBtn = document.getElementById("inventory-form")
 const searchBtn = document.getElementById("search-btn");
 const searchName = document.getElementById("search");
@@ -22,8 +24,12 @@ searchName.addEventListener("keydown", (event) => {
     }
 })
 
+
 // Llamar a la función para mostrar la tabla del inventario
 updateInventoryTable();
+
+});
+
 
 
 
