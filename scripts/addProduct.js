@@ -3,6 +3,7 @@ import { productManager } from "./main.js";
 import { updateInventoryTable } from "./updateTable.js";
 
 export const addProduct = () => {
+
 // Manejo formulario para añadir producto
 document.getElementById('inventory-form').addEventListener('submit', function(e){
     e.preventDefault();
@@ -24,7 +25,7 @@ document.getElementById('inventory-form').addEventListener('submit', function(e)
     // Limpiar formulario
     this.reset();
 
-    // Mensaje confirmación
+    // Mensaje confirmación con animación
     addedInput.innerText = `Producto "${productName}" añadido con éxito!`
     addedInput.classList.add("hidden")
     addedInput.style.display = "block"

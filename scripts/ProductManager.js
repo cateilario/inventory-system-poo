@@ -59,8 +59,6 @@ export class ProductManager {
         console.log("Products loaded from localStorage:", this.#products)
     }
 
-    
-
     // Método para añadir un producto
     addProduct(product){
         this.#products.push(product);
@@ -90,6 +88,7 @@ export class ProductManager {
         }
     }
 
+    // Método para buscar un producto a partir del nombre
     searchProductByName(name) {
         return this.#products.find(product => product.name.toLowerCase() === name.toLowerCase());
     }

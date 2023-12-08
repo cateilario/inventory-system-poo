@@ -12,7 +12,7 @@ export const totalInventory = () => {
     const totalPrice = products.reduce((total, product) => total + (product.quantity * product.price), 0);
     const totalQuantity = products.reduce((total, product) => total + product.quantity, 0);
     const averageCost = products.reduce((total, product) => total + (product.quantity * product.price), 0) / totalQuantity;
-    
+    // Reflejar valores en el template
     totalPriceResult.innerHTML = `${totalPrice.toLocaleString()}€`;
     totalQuantityResult.innerHTML = `${totalQuantity}`;
     averageCostResult.innerHTML = `${averageCost.toFixed(2)}€`;

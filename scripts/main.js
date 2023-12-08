@@ -5,7 +5,7 @@ import { addProduct } from "./addProduct.js";
 
 // Instanciar el ProductManager
 export const productManager = new ProductManager();
-
+// Cargar los productos del Local Storage
 productManager.loadProductsFromLocalStorage();
 
 // Enlazar botones con sus eventos
@@ -23,7 +23,6 @@ searchName.addEventListener("keydown", (event) => {
         searchProduct();
     }
 })
-
 
 // Llamar a la función para mostrar la tabla del inventario
 updateInventoryTable();
