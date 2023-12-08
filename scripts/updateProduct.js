@@ -24,6 +24,7 @@ export const updateProduct = product => {
 
         if(isNaN(newName) &&!isNaN(newQuantity) && !isNaN(newPrice)) {
             const updatedProduct = {
+                id: product.id,
                 name: newName,
                 quantity: newQuantity,
                 price: newPrice,

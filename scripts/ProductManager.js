@@ -26,7 +26,7 @@ export class ProductManager {
             {id: 8, name: "Kiwi", quantity: getRandomQuantity(), price: getRandomPrice()},
             {id: 9, name: "Limón", quantity: getRandomQuantity(), price: getRandomPrice()},
             {id: 10, name: "Aguacate", quantity: getRandomQuantity(), price: getRandomPrice()},
-            {id: 11, name: "Plátano", quantity: getRandomQuantity(), price: getRandomPrice()},
+            {id: 11, name: "Plátano de Canarias", quantity: getRandomQuantity(), price: getRandomPrice()},
             {id: 12, name: "Melón", quantity: getRandomQuantity(), price: getRandomPrice()},
             {id: 13, name: "Fresa", quantity: getRandomQuantity(), price: getRandomPrice()},
             {id: 14, name: "Cereza", quantity: getRandomQuantity(), price: getRandomPrice()},
@@ -108,9 +108,9 @@ export class ProductManager {
 
 // Funciones para obtener cantidad y precio aleatorios
 const getRandomQuantity = () =>{
-    return Math.floor(Math.random()* 13) +1;
+    return Math.floor(Math.random()* 100) +1;
 }
 
 const getRandomPrice = () => {
-    return (Math.random() * 100 + 1).toFixed(2)
+    return (Math.random() * 300 + 1).toFixed(2);
 }

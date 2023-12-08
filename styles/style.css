@@ -193,7 +193,8 @@ div > h3 + p {
     border-radius: 5px;
     background-color: #f0ecec;
     width: 30%;
-    height: 50%;
+    min-height: 50%;
+    padding-bottom: .5rem;
 }
 
 main{
