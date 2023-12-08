@@ -5,14 +5,17 @@ export const totalInventory = () => {
 
     // Elementos del DOM
     const totalPriceResult = document.getElementById("total-price");
-    const totalQuantityResult = document.getElementById("total-quantity")
+    const totalQuantityResult = document.getElementById("total-quantity");
+    const averageCostResult = document.getElementById("average-cost");
 
-    // Calcular el precio total y la cantidad total
+    // Calcular el precio total, la cantidad total y el coste medio
     const totalPrice = products.reduce((total, product) => total + (product.quantity * product.price), 0);
     const totalQuantity = products.reduce((total, product) => total + product.quantity, 0);
-
-    totalPriceResult.textContent = `${totalPrice.toLocaleString()}€`;
-    totalQuantityResult.textContent = `${totalQuantity}`;
+    const averageCost = products.reduce((total, product) => total + (product.quantity * product.price), 0) / totalQuantity;
+    
+    totalPriceResult.innerHTML = `${totalPrice.toLocaleString()}€`;
+    totalQuantityResult.innerHTML = `${totalQuantity}`;
+    averageCostResult.innerHTML = `${averageCost.toFixed(2)}€`;
 }
 
 document.addEventListener("DOMContentLoaded", totalInventory);

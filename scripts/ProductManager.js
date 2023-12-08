@@ -30,7 +30,7 @@ export class ProductManager {
             {id: 12, name: "Melón", quantity: getRandomQuantity(), price: getRandomPrice()},
             {id: 13, name: "Fresa", quantity: getRandomQuantity(), price: getRandomPrice()},
             {id: 14, name: "Cereza", quantity: getRandomQuantity(), price: getRandomPrice()},
-            {id: 15, name: "Melón", quantity: getRandomQuantity(), price: getRandomPrice()},
+            {id: 15, name: "Nectarina", quantity: getRandomQuantity(), price: getRandomPrice()},
             {id: 16, name: "Sandía", quantity: getRandomQuantity(), price: getRandomPrice()},
         ];
     }

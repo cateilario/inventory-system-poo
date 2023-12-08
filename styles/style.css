@@ -12,6 +12,9 @@
 body{
     background: #e3e7e9;
     background: radial-gradient(circle, #bebdbe 46%, #e3e7e9 96%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 nav{
@@ -44,14 +47,14 @@ nav a:hover{
 }
 
 header h1{
-    padding-top: 20px;
+    padding: 1.5rem;
     margin-left: 30px;
     font-size: 1.5rem;
     text-align: center;
 }
 
 header h2{
-    margin: 2rem 3rem;
+    margin: 1rem 3rem;
     padding-top: 1rem;
     font-size: 1.2rem;
     color:#2e2d2d;
@@ -59,12 +62,12 @@ header h2{
 }
 
 section form{
-    margin: 20px;
+    margin: 15px;
     background-color: white;
     border-radius: 5px;
     padding: 25px;
     font-size: .9rem;
-    box-shadow: 0 0 10px #808080;
+    box-shadow: 0 0 8px #808080;
 }
 
 input{
@@ -99,12 +102,12 @@ form button{
     margin: 20px auto;
     text-align: center;
     font-weight: 600;
-    animation: show .5s 1;
+    animation: show 1s linear;
 }
 
 @keyframes show {
-    0%{
-        transform: translate(-3vh)
+    from{
+        transform: translate(-10vh);
     }
 }
 
@@ -175,13 +178,14 @@ table button{
 div > h3{
     color:#484646;
     font-size: .9rem;
-    padding: .8rem;
+    margin: .8rem;
 }
 
 div > h3 + p {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     font-weight: 650;
-    padding: 0 .8rem;
+    margin-left: 1rem;
+    margin-top: -.5rem;
 }
 
 .control-panel .panel-content{
@@ -192,16 +196,20 @@ div > h3 + p {
     height: 50%;
 }
 
+main{
+    flex:1;
+}
+
 footer{
     background-color: #2e2d2d;
-    color: white;
-    text-align: center;
     padding: 20px;
     margin-top: 3rem;
 }
 
 footer p{
     font-size: .8rem;
+    color: white;
+    text-align: center;
 }
 
 
